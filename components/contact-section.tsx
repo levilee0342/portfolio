@@ -16,6 +16,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, Github, Linkedin, Send } from "lucide-react";
 import Link from "next/link";
+import { toast } from "sonner";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -24,10 +25,28 @@ export function ContactSection() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(
+          typeof data.error === "string"
+            ? data.error
+            : JSON.stringify(data.error)
+        );
+      }
+      toast.success("✅ Message sent successfully! I'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err: any) {
+      console.error("Contact submit error:", err?.message ?? err);
+      toast.error("❌ Failed to send: " + (err?.message ?? "Unknown error"));
+    }
   };
 
   return (

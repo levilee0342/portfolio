@@ -5,7 +5,7 @@ import { Briefcase } from "lucide-react"
 const experiences = [
   {
     title: "Backend Developer Intern",
-    company: "LikeliON Vietnam",
+    company: "LIKELION Vietnam",
     period: "July 2025 - September 2025",
     description:
       "Developed RESTful APIs using Spring Boot, implemented database optimization strategies, and collaborated with cross-functional teams to deliver scalable backend solutions.",
