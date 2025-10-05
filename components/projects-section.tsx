@@ -72,15 +72,6 @@ const projects = [
     award: null,
   },
   {
-    title: "Multiple-choice Exam Management",
-    description:
-      "Lightweight Java desktop application to manage students, subjects, classes, and exam scores. Supports automated grading, result summaries, and secure SQL Server storage—ideal for small education centers.",
-    stack: ["Java", "Java Swing / JavaFX", "SQL Server"],
-    github: "https://github.com/levilee0342/Multiple-choice-exam-management",
-    demo: null,
-    award: null,
-  },
-  {
     title: "AI-Powered Movie Ticket Booking Website & Chatbot",
     description:
       "Online movie ticket booking platform with AI chatbot for schedules, film details, and offers. Includes seat selection, payments, admin movie/schedule management, and a Python chatbot backed by ChromaDB.",
@@ -109,6 +100,15 @@ const projects = [
     stack: ["C#", "DevExpress", "SQL Server", "Windows (Desktop)"],
     github: "https://github.com/levilee0342/Bank-Management-System",
     demo: "https://github.com/levilee0342/Bank-Management-System/blob/main/Demo.md",
+    award: null,
+  },
+  {
+    title: "Multiple-choice Exam Management",
+    description:
+      "Lightweight Java desktop application to manage students, subjects, classes, and exam scores. Supports automated grading, result summaries, and secure SQL Server storage—ideal for small education centers.",
+    stack: ["Java", "Java Swing / JavaFX", "SQL Server"],
+    github: "https://github.com/levilee0342/Multiple-choice-exam-management",
+    demo: null,
     award: null,
   },
 ];

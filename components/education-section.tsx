@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Award, Medal } from "lucide-react";
+import { Button } from "./ui/button";
 
 export function EducationSection() {
   return (
@@ -63,10 +64,20 @@ export function EducationSection() {
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 Demonstrates proficiency in English communication for technical
                 documentation and international collaboration.
               </p>
+              {/* Nút xem chứng chỉ */}
+              <Button asChild variant="outline">
+                <a
+                  href="https://drive.google.com/file/d/1sIrz9AZuOWwx_rv8RpkfizF7xx7GGaA1/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Certificate
+                </a>
+              </Button>
             </CardContent>
           </Card>
         </div>
